@@ -19,14 +19,16 @@ nav a {
   font-weight: bold;
 }
 
-.hero {
+.hero{
   position: relative;
+  height: 60vh;   /* chiều cao ảnh theo màn hình */
+  overflow: hidden;
 }
 
 .hero-img{
   width:100%;
-  height:auto;
-  object-fit:contain;   /* hiển thị trọn ảnh */
+  height:100%;
+  object-fit: cover;  /* phủ kín ảnh */
 }
 
 .hero-text {

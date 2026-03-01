@@ -184,7 +184,7 @@ footer a {
 .hero-text h1,
 .hero-text h2,
 .hero-text h3{
-  font-size:45px;     /* chỉnh to nhỏ tại đây */
+  font-size:40px;     /* chỉnh to nhỏ tại đây */
   font-weight:bold;
   text-shadow:0 2px 8px rgba(0,0,0,0.5);
 }

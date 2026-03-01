@@ -269,3 +269,42 @@ footer a {
   50%{opacity:0.2;}
   100%{opacity:1;}
 }
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px){
+
+  header{
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  nav a{
+    display:block;
+    margin:8px 0;
+  }
+
+  .hero-text h1,
+  .hero-text h2,
+  .hero-text h3{
+    font-size:22px;
+  }
+
+  .slide{
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .slide img{
+    width:90%;
+  }
+
+  .about, .news{
+    padding:20px;
+  }
+
+}

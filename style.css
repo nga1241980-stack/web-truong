@@ -426,3 +426,20 @@ footer a {
 .class-popup.collapsed .popup-arrow{
   display:block;
 }
+
+.popup-arrow{
+  display:none;
+  background:#0077cc;
+  color:white;
+  padding:10px;
+  border-radius:0 12px 12px 0;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.class-popup.collapsed .popup-box{
+  display:none;
+}
+.class-popup.collapsed .popup-arrow{
+  display:block;
+}

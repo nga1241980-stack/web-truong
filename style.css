@@ -448,12 +448,24 @@ footer a {
 .class-popup{
   transition: transform .5s ease;
 }
-.class-popup.collapsed{
-  transform: translateX(-140%);
-}
 .popup-arrow{
   display:none;
+  position:absolute;
+  right:-30px;
+  top:50%;
+  transform:translateY(-50%);
+  background:#0077cc;
+  color:white;
+  padding:12px;
+  border-radius:0 12px 12px 0;
+  cursor:pointer;
+  font-size:22px;
 }
+
+.class-popup.collapsed{
+  transform: translateX(-85%);
+}
+
 .class-popup.collapsed .popup-arrow{
   display:block;
 }
@@ -474,17 +486,25 @@ footer a {
   gap:10px;
   transition: transform .5s ease;
 }
+
+/* gập hẳn ra ngoài */
 .right-panel.collapsed{
-  transform: translateX(140%);
+  transform: translateX(85%);
 }
 
+/* mũi tên hiện rõ */
 .right-arrow{
   display:none;
+  position:absolute;
+  left:-30px;
+  top:50%;
+  transform:translateY(-50%);
   background:#0077cc;
   color:white;
-  padding:10px;
-  border-radius:12px;
+  padding:12px;
+  border-radius:12px 0 0 12px;
   cursor:pointer;
+  font-size:22px;
 }
 
 .right-panel.collapsed .right-arrow{

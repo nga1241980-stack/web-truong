@@ -179,30 +179,37 @@
 
 <script src="script.js"></script>
 <!-- MUSIC -->
-<div class="music-icon" id="musicIcon" onclick="toggleMusic()">
-  <i class="fa-solid fa-play" id="musicIconInner"></i>
-</div>
+<div class="right-panel" id="rightPanel">
+  <span class="popup-close right-close" onclick="collapseRight()">✖</span>
 
-<div class="music-notes">
-  <span>♪</span>
-  <span>♫</span>
-  <span>♬</span>
-</div>
+  <div class="song-name" id="songName">⏸ Chưa phát</div>
 
-<!-- BUBBLE LINK TO WEB LOP -->
-<a href="https://weblop.onrender.com" class="class-bubble">
-  <img src="logo2.jpg">
-</a>
+  <div class="music-icon" id="musicIcon" onclick="toggleMusic()">
+    <i class="fa-solid fa-play" id="musicIconInner"></i>
+  </div>
+
+  <div class="music-notes">
+    <span>♪</span>
+    <span>♫</span>
+    <span>♬</span>
+  </div>
+
+  <a href="https://weblop.onrender.com" class="class-bubble">
+    <img src="logo2.jpg">
+  </a>
+
+  <div class="right-arrow" onclick="expandRight()">◀</div>
+</div>
 
 <!-- POPUP WEB LOP -->
 <div class="class-popup" id="classPopup">
-  <div class="popup-box" id="popupBox">
+  <div class="popup-box">
     <span class="popup-close" onclick="collapsePopup()">✖</span>
     <a href="https://weblop.onrender.com">
       <img src="7.png">
     </a>
   </div>
-  <div class="popup-arrow" id="popupArrow" onclick="expandPopup()">▶</div>
+  <div class="popup-arrow" onclick="expandPopup()">▶</div>
 </div>
 <div id="toTop">⬆</div>
 </body>

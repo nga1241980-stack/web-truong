@@ -142,25 +142,26 @@ window.addEventListener("scroll", checkFade);
 checkFade();
 
 /* ===== TO TOP ===== */
-const toTop = document.getElementById("toTop");
-toTop.onclick = ()=>{
+
+function scrollTopPage(){
   window.scrollTo({top:0, behavior:"smooth"});
-};
+}
 
 /* ===== AUTO HIDE HEADER ===== */
+
 let lastScroll = 0;
 const header = document.querySelector("header");
+let hideTimeout;
 
 window.addEventListener("scroll", ()=>{
   let currentScroll = window.pageYOffset;
 
-  if(currentScroll > lastScroll){
-    // kéo xuống → ẩn
+  header.classList.remove("hide");
+  clearTimeout(hideTimeout);
+
+  hideTimeout = setTimeout(()=>{
     header.classList.add("hide");
-  }else{
-    // kéo lên → hiện
-    header.classList.remove("hide");
-  }
+  }, 1200); // đứng yên 1.2s là ẩn
 
   lastScroll = currentScroll;
 });

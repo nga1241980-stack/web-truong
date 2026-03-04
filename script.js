@@ -103,3 +103,46 @@ setInterval(showPopup, 5000);
 function closePopup(){
   document.getElementById("classPopup").style.display="none";
 }
+
+/* ===== COUNTDOWN ===== */
+const targetDate = new Date("2026-03-04 15:00:00").getTime();
+
+setInterval(()=>{
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if(distance < 0) return;
+
+  const days = Math.floor(distance / (1000*60*60*24));
+  const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+  const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+},1000);
+
+/* ===== FADE ON SCROLL ===== */
+const faders = document.querySelectorAll(".fade");
+
+function checkFade(){
+  const trigger = window.innerHeight * 0.85;
+
+  faders.forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < trigger){
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", checkFade);
+checkFade();
+
+/* ===== TO TOP ===== */
+const toTop = document.getElementById("toTop");
+toTop.onclick = ()=>{
+  window.scrollTo({top:0, behavior:"smooth"});
+};

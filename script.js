@@ -164,3 +164,19 @@ window.addEventListener("scroll", ()=>{
 
   lastScroll = currentScroll;
 });
+
+/* ===== LEFT POPUP ===== */
+function collapsePopup(){
+  document.getElementById("classPopup").classList.add("collapsed");
+}
+function expandPopup(){
+  document.getElementById("classPopup").classList.remove("collapsed");
+}
+
+/* ===== RIGHT PANEL ===== */
+function collapseRight(){
+  document.getElementById("rightPanel").classList.add("collapsed");
+}
+function expandRight(){
+  document.getElementById("rightPanel").classList.remove("collapsed");
+}

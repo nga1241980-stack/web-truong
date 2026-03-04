@@ -105,7 +105,7 @@ function closePopup(){
 }
 
 /* ===== COUNTDOWN ===== */
-const targetDate = new Date("2026-03-04 15:00:00").getTime();
+const targetDate = new Date("2026-03-05 06:30:00").getTime();
 
 setInterval(()=>{
   const now = new Date().getTime();
@@ -146,3 +146,21 @@ const toTop = document.getElementById("toTop");
 toTop.onclick = ()=>{
   window.scrollTo({top:0, behavior:"smooth"});
 };
+
+/* ===== AUTO HIDE HEADER ===== */
+let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", ()=>{
+  let currentScroll = window.pageYOffset;
+
+  if(currentScroll > lastScroll){
+    // kéo xuống → ẩn
+    header.classList.add("hide");
+  }else{
+    // kéo lên → hiện
+    header.classList.remove("hide");
+  }
+
+  lastScroll = currentScroll;
+});

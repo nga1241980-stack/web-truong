@@ -181,3 +181,26 @@ function collapseRight(){
 function expandRight(){
   document.getElementById("rightPanel").classList.remove("collapsed");
 }
+
+const fadeScrollEls = document.querySelectorAll(".scroll-fade");
+
+function fadeByScroll(){
+  const vh = window.innerHeight;
+
+  fadeScrollEls.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    const center = rect.top + rect.height/2;
+
+    let distance = Math.abs(vh/2 - center);
+    let opacity = 1 - distance / (vh/2);
+
+    if(opacity < 0.2) opacity = 0.2;
+    if(opacity > 1) opacity = 1;
+
+    el.style.opacity = opacity;
+    el.style.filter = `blur(${(1-opacity)*2}px)`;
+  });
+}
+
+window.addEventListener("scroll", fadeByScroll);
+fadeByScroll();
